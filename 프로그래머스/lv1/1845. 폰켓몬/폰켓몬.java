@@ -11,17 +11,10 @@ class Solution {
             set.add(nums[i]);
         }
 
-        int count = 0;
-        Iterator<Integer> it = set.iterator();
-        while (it.hasNext()) {
-            it.next();
-            count++;
-        }
-        
-        if (count >= half) {
+        if (set.size() >= half) {
             return half;
         } else {
-            return count;
+            return set.size();
         }
     }
 }
